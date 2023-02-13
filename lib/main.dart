@@ -1,5 +1,6 @@
+import 'package:first_app/pages/LoginPage.dart';
 import "package:flutter/material.dart";
-import 'Home_page.dart';
+import 'pages/HomePage.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -10,7 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      routes: {
+        "/": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
+      },
     );
   }
 }
